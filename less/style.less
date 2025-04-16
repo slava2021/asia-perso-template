@@ -1,0 +1,72 @@
+@import "fonts";
+
+//Color settings
+@primaty-color: #ffffff;
+@link-color: #707070;
+@text-color: #000000;
+@secondary-color: #E8E8E8;
+@fird-color: #E12229;
+@fird-opacity-color: rgba(225, 34, 41, .1);
+@secondary-opacity-oclor: rgba(112, 112, 112, .1);
+
+@desk-width: 1640px;
+@tablet-width: 768px;
+
+//Font style settings
+@regular: ~"400";
+@semibold: ~"600";
+@bold: ~"700";
+@font-style:"montserrat", sans-serif;
+
+.font-text(@color, @weight){
+    font-family: @font-style;
+    font-weight: @weight;
+    font-style: normal;
+    color:@color;
+}
+
+* {
+    // box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 auto;
+    width: calc(100% - 15px);  // отступ по 16px в случае если страница <= 1024px
+    max-width: 1640px; 
+    min-width: 1200px;
+    margin: 0 auto;
+    // border: 1px solid green;
+    padding: 0 10px 0 10px;
+}
+
+@import "./elements/font-style.less";
+@import "./elements/button.less";
+@import "./elements/image.less";
+@import "./elements/blocks.less";
+
+@import "./top/top-container.less";
+@import "./top/top-style.less";
+
+@import "./header/header-container.less";
+@import "./header/header-style.less";
+
+@import "./about/about-container.less";
+@import "./about/about-style.less";
+
+@import "./services/services-container.less";
+@import "./services/services-style.less";
+
+@import "./cards/cards-container.less";
+@import "./cards/cards-style.less"; 
+
+@import "./adver/adver-container.less";
+@import "./adver/adver-style.less";
+
+@import "./perso/perso-container.less";
+@import "./perso/perso-style.less";
+
+@import "./footer/footer-container.less";
+@import "./footer/footer-style.less";

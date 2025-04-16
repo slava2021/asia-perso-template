@@ -1,0 +1,30 @@
+.header-container{
+    padding-top: 40px;
+    & .header-title{
+        width:376px;
+        & .title-h1{
+            font-size: 56px;
+        }
+    }
+}
+
+.header-title > .header-text:nth-child(2){
+    .font-text(@fird-color, @bold);
+    font-size: 22px;
+    padding-bottom: 40px;
+}
+
+.header-title > .header-text:nth-child(3){
+    .font-text(@text-color, @bold);
+    font-size: 28px;
+    padding-bottom: 150px;
+}
+
+.header-bg{
+    background-image: url("../../images/header-bg.png");
+    background-position-y: 25%;
+    background-position: center 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}

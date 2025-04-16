@@ -1,0 +1,42 @@
+.logo{
+    min-width: 180px;
+    padding-right: 10px;
+    & .title-h1{
+        font-size: 24px;
+ }
+}
+
+.title-h1{
+    .font-text(@text-color, @bold);
+    & span:first-child{
+        color: @fird-color;
+    }
+}
+
+.top-menu {
+    width: 100%;
+    padding-bottom: 2px;
+    & .top-menu-list{
+        list-style-type: none;
+        & .top-menu-link{
+            .font-text(@link-color, @regular);
+            text-decoration: none;
+            font-size: 18px;
+            
+        }
+    }
+}
+
+.sidebar{
+    font-size: 14px;
+    .font-text(@text-color, @regular);
+    & .contacts{
+        line-height: 20px;
+    }
+    & .language{
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+        color:@fird-color;
+    }
+}

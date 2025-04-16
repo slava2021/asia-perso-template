@@ -1,0 +1,32 @@
+.about{
+    & .title-h3{
+        padding-left: 90px;
+        padding-bottom: 10px;
+    }
+    & .text{
+        width:80%;
+        padding-left: 90px;
+    }
+    & .text span{
+        font-weight: 600;
+    }
+    & .right-block{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    & .left-block{
+        position: relative;
+        min-height: 320px;
+        & .img-cards{
+            position: absolute;
+            top: 0;
+            left: -50px;
+        }
+    }
+
+    .image{
+        border-radius: 10px;
+        .shadow-mixin(@fird-opacity-color, -20px, -20px)
+    }
+}

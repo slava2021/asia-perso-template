@@ -1,0 +1,88 @@
+.card-item{
+    filter: drop-shadow(16px -16px 0px rgba(232, 232, 232, .8));
+}
+
+.cards-container{
+    background-image: url("../../images/cards-bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.left-items, .center-items, .right-items{
+    & .card-item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 2px solid #ffffff;
+
+        & .title-h4{
+            align-self: center;
+            width: 100%;
+            font-size: 24px;
+        }
+
+        & .card-image {
+            width: 100%;
+            height: 70%;
+            align-self:flex-end;
+        
+            padding: 0;
+            margin: 0;
+            border-radius:0 0 10px 10px;
+            border-top: 3px solid @link-color;
+
+            & .image-card-item{
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                min-height: 100%;
+                mix-blend-mode: multiply;
+                line-height: 0;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
+
+.left-items{
+        & .card-item:nth-child(1){ 
+            & .image-card-item{
+            background-image: url("../../images/cards-img-01.jpg");
+            }
+        }
+        & .card-item:nth-child(2){ 
+            & .image-card-item{
+            background-image: url("../../images/cards-img-02.jpg");
+            }
+        }
+    }
+
+    .center-items{
+        & .card-item:nth-child(1){ 
+            & .image-card-item{
+            background-image: url("../../images/cards-img-03.jpg");
+            }
+        }
+        & .card-item:nth-child(2){ 
+            & .title-h4{
+                font-size: 18px;
+            }
+            & .image-card-item{
+            background-image: url("../../images/cards-img-04.jpg");
+            }
+        }
+    }
+
+    .right-items{
+        & .card-item:nth-child(1){ 
+            & .image-card-item{
+            background-image: url("../../images/cards-img-05.jpg");
+            }
+        }
+        & .card-item:nth-child(2){
+            & .image-card-item{
+            background-image: url("../../images/cards-img-06.jpg");
+            }
+        }
+    }

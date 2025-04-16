@@ -1,0 +1,55 @@
+.cards-container{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+    
+
+    & .text {
+        position: absolute;
+        width: calc(100vw - 77px);
+        left: 90px;
+        top: 2%;
+    }
+
+    & .cards-block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+
+        & .left-items, .right-items{
+            padding-top: 200px;
+        }
+
+        & .card-items{
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+        }
+        & .card-item{
+            width: calc(100vw - 84px);
+            min-width: 260px;
+            height: calc(100vw - 78px);
+            min-height: 300px;
+            border-radius: 10px;
+            // padding: 10px;
+
+            &.orange{
+                background-color: rgba(225, 180, 34, .7);
+            }
+
+            &.aquamarine{
+                background-color: rgba(34, 225, 192, .7);
+            }
+            &.green{
+                background-color: rgba(130, 225, 34, .7);
+            }
+            &.blue{
+                background-color: rgba(34, 123, 225, .7);
+            }
+            &.red{
+                background-color: rgba(225, 34, 86, .7);
+            }
+        }
+    }
+}
