@@ -57,3 +57,24 @@
         }
     }
 }
+
+@media (max-width: 425px){
+    .about{
+        grid-template-columns: auto;
+        justify-content: center;
+        & .left-block{
+            padding:0 10%;
+            & .img-cards{
+                position: absolute;
+                top: 0;
+                left: 40px;
+                & img{
+                    width: 200px;
+                }
+            } 
+        }
+        & .right-block{
+            display: none;
+        }
+    }
+}

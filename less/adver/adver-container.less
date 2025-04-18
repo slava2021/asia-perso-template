@@ -35,3 +35,33 @@
     padding-bottom: 40px;
   }
 }
+
+@media (max-width: 425px){
+  .adver-container{
+    padding-bottom: 20px;
+    padding-top: 20px;
+ 
+    & .text{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+ 
+    & .adver-top{
+     padding-bottom: 20px;
+     & .title-h3{
+       padding-left: 20px;
+       width:60%;
+     }
+ 
+    }
+ 
+    & .adver-bottom{
+     padding-top: 20px;
+     & .title-h3{
+       padding-left: 20px;
+       width:70%;
+     }
+    }
+  }
+}

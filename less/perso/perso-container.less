@@ -65,3 +65,105 @@
 
     }
 }
+
+@media (max-width: 425px){
+    .perso-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "aa"
+        "bb"
+        "cc";
+        padding-bottom: 20px;
+        & .perso-left, .perso-right{
+            grid-area: aa ;
+            padding-left: 0 !important;
+            & .perso-item{
+                padding: 30px;
+                & .title-h3{
+                    width: 60%;
+                }
+                & .text{
+                    width:60%;
+                }
+            }
+            & div:last-child{
+                align-items: flex-end;
+            }
+
+            & div:first-child{
+                align-items:flex-start;
+            }
+        }
+
+        & .perso-left{
+            & div:first-child{
+                &:after{
+                    content: " ";
+                    background-image: url("../../images/cards-img-01.jpg");
+                    background-size: cover;
+                    width: 100px;
+                    height: 180px;
+                    position: absolute;
+                    right: 40px;
+                    border-radius: 10px;
+                }
+            }
+            & div:last-child{
+                &:before{
+                    content: " ";
+                    background-image: url("../../images/cards-img-05.jpg");
+                    background-size: cover;
+                    width: 100px;
+                    height: 180px;
+                    position: absolute;
+                    left: 40px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        & .perso-right{
+            & div:first-child{
+                &:after{
+                    content: " ";
+                    background-image: url("../../images/cards-img-03.jpg");
+                    background-size: cover;
+                    width: 100px;
+                    height: 180px;
+                    position: absolute;
+                    right: 40px;
+                    border-radius: 10px;
+                }
+            }
+            & div:last-child{
+                &:before{
+                    content: " ";
+                    background-image: url("../../images/cards-img-04.jpg");
+                    background-size: cover;
+                    width: 100px;
+                    height: 180px;
+                    position: absolute;
+                    left: 40px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        & .perso-right{
+            grid-area: bb ;
+            padding-left: 20px;
+        }
+        & .perso-center{
+            grid-area: cc ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+            & .perso-image{
+                display: none;
+            }
+        }
+    }  
+}

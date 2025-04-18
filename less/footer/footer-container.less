@@ -57,3 +57,31 @@
         }
     }
 }
+
+@media (max-width: 425px){
+    .footer-container{
+        min-height: 390px;
+        & .footer-items{
+            display: flex;
+            flex-direction: column;
+            justify-content:left;
+            padding-top: 0;
+            row-gap: 20px;
+
+            & .footer-contact{
+                width:60%;
+    
+                & .text{
+                    line-height: 24px;
+                }
+            }
+            & .footer-nav{
+                width: 60%;
+                & .footer-nav-items{
+                    display: flex; 
+                    justify-content: left;
+                }
+            }
+        }
+    }
+}

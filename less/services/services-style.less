@@ -92,3 +92,38 @@
         }
     }
 }
+
+@media (max-width: 425px){
+    .block-container.services{
+        & .left-block{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            align-items: center;
+            justify-content: center;
+            & .card-ico{
+                top: 0px;
+                left: 20px;
+            }
+            & .image-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 20px;
+            }
+            & .size-s img{
+                width: 80%;
+            }
+        }
+        & .right-block{
+            & .text{
+                width: 70%;
+                padding-bottom: 20px;
+            }
+            & .card-ico{
+                bottom: 0px;
+                right: 20px;
+            }   
+        }
+    }
+}
