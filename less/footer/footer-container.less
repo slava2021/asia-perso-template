@@ -37,3 +37,23 @@
         }
     }
 }
+
+@media (max-width: 768px){
+    .wrapper {
+        min-height: 250px;
+    }
+    
+    .footer-container{
+        min-height: 250px;
+
+        & .footer-items{
+            padding-top: 0;
+            & .footer-contact{
+                & .text{
+                    line-height: 20px;
+                }
+            }
+
+        }
+    }
+}

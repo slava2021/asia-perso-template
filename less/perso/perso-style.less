@@ -1,9 +1,22 @@
 .perso-bg{
     background: 
-    url("../images/perso-bg-left.png"),
-    url("../images/perso-bg-right.png");
+    url("../images/perso-bg-left.png") 200px,
+    url("../images/perso-bg-right.png") 200px;
     background-position:
     -450px 171%,
-    right 590px;
+    right bottom;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 768px){
+    .perso-bg{
+        background-position:
+        -190px bottom,
+        right bottom;
+        background-repeat: no-repeat;
+        background-size:300px, 100px;
+    }
+    .perso-image{
+        width: 300px;
+    }
 }

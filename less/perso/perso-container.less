@@ -26,3 +26,42 @@
         padding: 20px;
     }
 }
+
+@media (max-width: 768px){
+    .perso-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "aa bb"
+        "cc bb";
+        padding-bottom: 20px;
+    
+        & .perso-left{
+            grid-area: aa ;
+            padding-left: 20px;
+        }
+
+        & .perso-right{
+            grid-area: cc ;
+            padding-left: 20px;
+        }
+
+        & .perso-center{
+            grid-area: bb ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        & .perso-image{
+            padding: 10px;
+            width: 90%;
+            margin-bottom: 30px;
+        }
+        & .title-h3{
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+    }
+}

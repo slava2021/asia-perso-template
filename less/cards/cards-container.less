@@ -53,3 +53,37 @@
         }
     }
 }
+
+@media (max-width: 768px){
+    .cards-container{
+        padding-top: 40px;
+        padding-bottom: 40px;        
+    
+        & .text {
+            position: absolute;
+            width: calc(100vw - 57px);
+            left: 40px;
+            top: 2%;
+        }
+    
+        & .cards-block{
+            column-gap: 30px;
+    
+            & .left-items, .right-items{
+                padding-top: 100px;
+            }
+    
+            & .card-items{
+                gap: 30px;
+            }
+            & .card-item{
+                width: calc(100vw - 74px);
+                min-width: 100px;
+                // height: calc(100vw - 38px);
+                min-height: 230px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+}
