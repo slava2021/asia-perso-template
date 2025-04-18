@@ -34,18 +34,25 @@
 
 .container{
     margin: 0 auto;
-    width: calc(100% - 15px);  // отступ по 16px в случае если страница <= 1024px
     max-width: 1640px; 
-    min-width: 1200px;
     margin: 0 auto;
-    // border: 1px solid green;
     padding: 0 10px 0 10px;
+}
+
+.bg-silver,
+.wrapper,
+.header-bg,
+.block-container.services,
+.container,
+.perso-bg{
+    min-width: 1400px;
 }
 
 @import "./elements/font-style.less";
 @import "./elements/button.less";
 @import "./elements/image.less";
 @import "./elements/blocks.less";
+@import "./elements/menu.less";
 
 @import "./top/top-container.less";
 @import "./top/top-style.less";
