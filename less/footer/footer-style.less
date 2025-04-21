@@ -35,7 +35,15 @@
     justify-content: right;
     align-items: center;
     padding-top: 30px;
+    padding-bottom: 30px;
     padding-right: 30px;
+    .font-text(@text-color, @bold);
+    font-size: 16px;
+
+    & svg{
+        width: 18px;
+    }
+
     & span{
         padding-left: 10px;
     }
@@ -62,6 +70,15 @@
         background-size: 200px;
         background-position-x: 90%;
         background-position-y: 200px ;
+    }
+
+    .language-bottom{
+        font-size: 10px;
+    
+        & svg{
+            width: 12px;
+        }
+    
     }
 }
 
