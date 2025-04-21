@@ -4,23 +4,19 @@
     align-items:flex-end;
     justify-content: space-between;
 }
+
 .top-menu {
     width: 100%;
-    & .top-menu-list{
+    .top-menu-container{
         display: flex;
-        gap: 1vw;
+        width: 100%;
+    
+        & .top-menu-list{
+            display: flex;
+            gap: 1vw;
+        }
     }
 }
-
-// .sidebar{
-    
-//     align-self: center;
-//     display: flex;
-//     column-gap: 40px;
-//     justify-items: center;
-//     align-items: center;
-//     min-height: 100px;
-// }
 
 @media (max-width: 768px){
     min-width: 50px;

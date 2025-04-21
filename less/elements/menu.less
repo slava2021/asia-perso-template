@@ -1,6 +1,8 @@
 .top-menu{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  & .top-menu-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   & .sidebar{
     display: grid;
@@ -41,82 +43,80 @@
 
 }
 
-
-  
 .top-menu-button:focus {
   outline: none;
 }
 
 
-nav.top-menu ul.top-menu-list li {
+.top-menu .top-menu-list .top-menu-item {
   align-self: flex-end;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
   width: auto;
 }
   
-nav.top-menu ul.top-menu-list li a:hover {
+.top-menu .top-menu-list li a:hover {
   border-bottom:2px solid @fird-color;
 }
   
   
   @media (max-width: 768px) {
-    nav.top-menu{
+    .top-menu{
         position: relative;
         display: flex;
         justify-content: right;
+
+        &.menu-silver{
+          background-color: #e7e7e7;
+          opacity: .97;
+          border-radius: 10px 10px 0 0;
+        }
     }
-    nav.top-menu ul.top-menu-list {
-      display: none;
-      flex-direction: column;
+    .top-menu-container {
+      display: none !important;
+      flex-direction: column-reverse;
       width: 100%;
+
+      border-radius: 0 0 10px 10px;
     }
 
-    nav.top-menu ul.top-menu-list li {
-      align-self: flex-start;
-    }
-
-    nav.top-menu .sidebar{
-      display: none;
-  }
-    
-    nav.top-menu ul.show {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top:76px;
-        background-color: #e7e7e7;
-        padding: 20px 20px;
-        opacity: .95;
-
-        & li{
-           
-            width:150px;
-        }
-    }
-
-    nav.top-menu .sidebar.show{
+    .top-menu-container.show{
+      display: grid !important;
+      grid-template-columns: auto auto;
       position: absolute;
-      display: flex;
-      top: 100px;
-      right: 20px;
+      top: 70px;
+      background-color: #e7e7e7;
+      opacity: .97;
+      border-radius: 0 0 10px 10px;
+      gap: 10px;
 
-      & .language {
-        padding-left: 20px;
-        align-self: flex-start;
-        & svg{
-          display: none;
+      & .top-menu-list{
+        display: flex;
+        flex-direction: column;
+
+        & .top-menu-item{
+          text-align: left;
+          align-self: flex-start;
+          padding-left: 20px;
         }
-        & select{
-          border: none;
-          }
       }
 
-      & .contacts{
+      & .sidebar{
         display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & .contacts{
+          display: flex;
+          justify-content:center;
+        }
+        & .language{
+          display: flex;
+          justify-content: center;
+        }
       }
     }
+
     
     .top-menu-button {
       display: block;
@@ -127,48 +127,48 @@ nav.top-menu ul.top-menu-list li a:hover {
     }
   }
   
-@media (max-width: 600px) {
-    nav.top-menu ul.top-menu-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    }
-    nav.top-menu ul.show {
-        display: flex;
-    }
-    .top-menu-button {
-        display: block;
-    }
-    nav.top-menu {
-        // background-color: rgb(62, 109, 149);
+// @media (max-width: 600px) {
+//     nav.top-menu ul.top-menu-list {
+//     display: none;
+//     flex-direction: column;
+//     width: 100%;
+//     }
+//     nav.top-menu ul.show {
+//         display: flex;
+//     }
+//     .top-menu-button {
+//         display: block;
+//     }
+//     nav.top-menu {
+//         // background-color: rgb(62, 109, 149);
 
-        & .sidebar.show{
-          display: grid;
-          grid-template-columns: auto;
-          grid-template-rows: auto auto;
-          row-gap: 10px;
-        }
-    }
+//         & .sidebar.show{
+//           display: grid;
+//           grid-template-columns: auto;
+//           grid-template-rows: auto auto;
+//           row-gap: 10px;
+//         }
+//     }
 
-  }
+//   }
 
-  @media (max-width: 500px){
-    nav.top-menu .sidebar.show{
-      display: flex;
-      top: 230px;
-      justify-content: center;
-      align-items: center;
-       & .contacts{
-        width: 100%;
-       }
-    }
-    nav.top-menu ul.top-menu-list{
-      height: 200px;
-      justify-content: flex-start;
-      & li{
-        width: 100%;
-        text-align: center;
-      }
-  }
-}
+//   @media (max-width: 500px){
+//     nav.top-menu .sidebar.show{
+//       display: flex;
+//       top: 230px;
+//       justify-content: center;
+//       align-items: center;
+//        & .contacts{
+//         width: 100%;
+//        }
+//     }
+//     nav.top-menu ul.top-menu-list{
+//       height: 200px;
+//       justify-content: flex-start;
+//       & li{
+//         width: 100%;
+//         text-align: center;
+//       }
+//   }
+// }
   
