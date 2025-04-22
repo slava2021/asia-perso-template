@@ -29,14 +29,89 @@
 
 .sidebar{
     font-size: 14px;
+    padding-right: 50px;
     .font-text(@text-color, @regular);
     & .contacts{
         line-height: 20px;
     }
     & .language{
+        & .nav-lang{
+            position: relative;
         display: flex;
         align-items: center;
         column-gap: 14px;
         color:@fird-color;
+            & .language-list{
+                list-style: none;
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 100px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+                top: 20px;
+                left: 20px;
+                z-index: 1;
+                & .lang_active{
+                    color: @fird-color;
+                }
+                & a{
+                    text-decoration: none;
+                    display: block;
+                    padding: 4px;
+                    color: @link-color;
+                    border-bottom: 2px solid transparent;
+                    &:hover{
+                        border-bottom: 2px solid @fird-color;
+                    }
+                }
+            }
+            & span:hover{
+                cursor: pointer;
+            }
+            &:hover .language-list{
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        & .language{
+            & .nav-lang{
+                justify-content: flex-start;
+                align-items: flex-start;
+                column-gap: 4px;
+                & span{
+                    display: none !important;
+                }
+                & .language-list{
+                    display: block !important;
+                   min-width: 50px;
+                    box-shadow: none;
+                    position: relative;
+                    background-color: transparent;
+                    top:0;
+                    left: 0;
+                    padding: 0;
+
+                    & a{
+                        text-decoration: none;
+                        display: block;
+                        padding: 4px;
+                        color: @link-color;
+                        border-bottom: 2px solid transparent;
+                        font-size: 10px;
+                        &:hover{
+                            border-bottom: 2px solid @fird-color;
+                        }
+                    }
+                }
+                &:hover .language-list{
+                    display: block;
+                }
+            }
+        }
     }
 }

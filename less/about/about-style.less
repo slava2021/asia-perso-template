@@ -1,11 +1,15 @@
 .about{
     & .title-h3{
+        position: relative;
         padding-left: 90px;
         padding-bottom: 10px;
+        z-index: 99;
     }
     & .text{
+        position: relative;
         width:80%;
         padding-left: 90px;
+        z-index: 99;
     }
     & .text span{
         font-weight: 600;
@@ -17,11 +21,13 @@
     }
     & .left-block{
         position: relative;
+        z-index: 1;
         min-height: 300px;
         & .img-cards{
             position: absolute;
             top: 0;
             left: -50px;
+            z-index:1;
         }
     }
 
