@@ -1,11 +1,48 @@
 .button {
     .font-text(@primaty-color, @semibold);
-    font-size: 26px;
+    font-size: 24px;
     background-color: @fird-color;
     border: none;
     padding: 10px 30px;
-    border-radius: 30px;
-    filter: drop-shadow(12px 10px 0px @secondary-color);
+    border-radius: 20px;
+    // filter: drop-shadow(12px 10px 0px @secondary-color);
+    transform-style: preserve-3d;
+    
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 10px;
+        right: 0;
+        bottom: 0;
+        background: @secondary-color;
+        border-radius: inherit;
+        // box-shadow: 0 0.625em 0 0 #ffe3e2;
+        transform: translate3d(0, 0.75em, -1em);
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+    
+    &:hover{
+        cursor: pointer;
+        background: darken(@fird-color, 6%);
+        transform: translate(0, 0.25em);
+        // background-color: darken(@fird-color, 6%);
+        // filter: drop-shadow(12px 10px 0px @secondary-color);
+        &::before{
+            // box-shadow: 0 0.5em 0 0 #ffe3e2;
+            transform: translate3d(0, 0.5em, -1em);
+        }
+    }
+    &:active{
+        background: @fird-color;
+        transform: translate(0em, 0.75em); 
+        &::before{
+            // box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+            transform: translate3d(0, 0, -1em);  
+        }
+    }
 }
 
 @media (max-width: 768px){

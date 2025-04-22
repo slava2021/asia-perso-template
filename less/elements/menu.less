@@ -55,9 +55,15 @@
   width: auto;
 }
   
-.top-menu .top-menu-list li a:hover {
-  border-bottom:2px solid @fird-color;
+.top-menu .top-menu-list li a{
+    &:hover {
+    border-bottom:2px solid @fird-color;
+    &:active{
+      color: @fird-color;
+    }
+  }
 }
+
   
   
   @media (max-width: 768px) {
